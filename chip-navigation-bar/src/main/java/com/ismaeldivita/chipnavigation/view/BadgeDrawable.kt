@@ -7,7 +7,7 @@ import android.graphics.drawable.GradientDrawable
 import android.graphics.drawable.GradientDrawable.RECTANGLE
 import android.text.TextPaint
 import androidx.annotation.ColorInt
-import com.ismaeldivita.chipnavigation.R
+import ismaeldivita.chipnavigation.R
 import kotlin.math.roundToInt
 
 internal class BadgeDrawable(val context: Context) : Drawable() {

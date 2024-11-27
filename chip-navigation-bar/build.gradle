@@ -4,11 +4,14 @@ apply plugin: 'kotlin-parcelize'
 apply plugin: 'maven-publish'
 
 android {
-    compileSdkVersion 31
+
+    namespace 'ismaeldivita.chipnavigation'
+
+    compileSdkVersion 35
 
     defaultConfig {
         minSdkVersion 23
-        targetSdkVersion 31
+        targetSdkVersion 35
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -17,6 +20,13 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_17
     }
     tasks.withType(Javadoc).all {
         enabled = false
@@ -36,18 +46,18 @@ dependencies {
         kakao = '3.0.6'
     }
 
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlinStd"
-    implementation "androidx.appcompat:appcompat:$appcompat"
-    implementation "androidx.constraintlayout:constraintlayout:$constraint"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:2.0.20"
+    implementation "androidx.appcompat:appcompat:1.7.0"
+    implementation "androidx.constraintlayout:constraintlayout:2.2.0"
 
     testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation "androidx.test:runner:$testRunner"
-    androidTestImplementation "androidx.test:rules:$testRunner"
-    androidTestImplementation "androidx.arch.core:core-testing:$testArchComponent"
-    androidTestImplementation "androidx.test.ext:junit:$testJunit"
-    androidTestImplementation "androidx.test.ext:junit-ktx:$testJunit"
-    androidTestImplementation "androidx.test.espresso:espresso-core:$testEspresso"
-    androidTestImplementation "io.github.kakaocup:kakao:$kakao"
+    androidTestImplementation "androidx.test:runner:1.6.2"
+    androidTestImplementation "androidx.test:rules:1.6.1"
+    androidTestImplementation "androidx.arch.core:core-testing:2.2.0"
+    androidTestImplementation "androidx.test.ext:junit:1.2.1"
+    androidTestImplementation "androidx.test.ext:junit-ktx:1.2.1"
+    androidTestImplementation "androidx.test.espresso:espresso-core:3.6.1"
+    androidTestImplementation "io.github.kakaocup:kakao:3.0.6"
 }
 
 afterEvaluate {
@@ -55,9 +65,9 @@ afterEvaluate {
         publications {
             release(MavenPublication) {
                 from components.release
-                groupId = 'com.github.ismaeldivita'
+                groupId = 'com.github.akshayM025'
                 artifactId = 'chip-navigation-bar'
-                version = '1.4.0'
+                version = '1.0.0'
             }
         }
     }

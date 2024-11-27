@@ -22,6 +22,7 @@ import com.ismaeldivita.chipnavigation.util.getChildren
 import com.ismaeldivita.chipnavigation.view.HorizontalMenuItemView
 import com.ismaeldivita.chipnavigation.view.MenuItemView
 import com.ismaeldivita.chipnavigation.view.VerticalMenuItemView
+import ismaeldivita.chipnavigation.R
 
 class ChipNavigationBar @JvmOverloads constructor(
     context: Context,

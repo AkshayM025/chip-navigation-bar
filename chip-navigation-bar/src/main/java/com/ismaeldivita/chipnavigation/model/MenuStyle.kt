@@ -5,7 +5,7 @@ import android.content.res.TypedArray
 import androidx.annotation.ColorInt
 import androidx.annotation.IdRes
 import androidx.core.content.ContextCompat
-import com.ismaeldivita.chipnavigation.R
+import ismaeldivita.chipnavigation.R
 
 class MenuStyle(context: Context, attr: TypedArray) {
 
